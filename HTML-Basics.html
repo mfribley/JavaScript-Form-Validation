@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Customer Information</title>
+	
+	<link rel="stylesheet" type="text/css" href="CSS-Basics.css">
+	
+	<script>
+	function validateForm() {
+		var x = document.forms["CustInfoForm"]["FirstName"].value;
+		var y = document.forms["CustInfoForm"]["LastName"].value;
+		var z = document.forms["CustInfoForm"]["EmailAddress"].value;
+		
+		if (x == "") {
+			alert("'First Name' is a required field!");
+		}
+		
+		if (y == "") {
+			alert("'Last Name' is a required field!");
+		}
+		
+		if (z == "") {
+			alert("'Email Address' is a required field!");
+		}
+	}
+	</script>
+</head>
+
+<body>
+	<div class="center">
+		<h1>Customer Information</h1>
+	
+			<p>Please enter your First Name, Last Name and Email Address in the form below.<br>
+			Click the 'Submit' button once you have filled out the form.</p><br>
+	
+				<div class="div2">
+					<form name="CustInfoForm" onsubmit="return validateForm()" method="post">
+					First Name<br>
+					<input type="text" name="FirstName" placeholder="Your First Name"><br>
+		
+					Last Name<br>
+					<input type="text" name="LastName" placeholder="Your Last Name"><br>
+		
+					Email Address<br>
+					<input type="text" name="EmailAddress" placeholder="Your Email Address"><br>
+		
+					<input type="submit" value="Submit">
+					</form>
+				</div>
+	
+	</div>
+</body>
+</html>
